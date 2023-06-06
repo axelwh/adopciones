@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <div class="h-screen mt-5 flex flex-column gap-3 justify-content-center align-items-center w-100">
+        <div class="list-group w-50 mx-auto">
+            <a href="{% url 'mascotas:mascotas_funciones' %}"
+               class="list-group-item list-group-item-action text-uppercase">
+                mascotas funciones
+            </a>
+            <a href="{% url 'mascotas:mascotas_clases' %}"
+               class="list-group-item list-group-item-action text-uppercase">
+                mascotas clases
+            </a>
+        </div>
+    </div>
+{% endblock %}

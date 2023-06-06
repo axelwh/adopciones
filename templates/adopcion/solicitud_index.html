@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <div class="h-screen mt-5 flex flex-column gap-3 justify-content-center align-items-center w-100">
+        <div class="list-group w-50 mx-auto">
+            <a href="{% url 'solicitudes:solicitudes_funciones' %}"
+               class="list-group-item list-group-item-action text-uppercase">
+                solicitudes funciones
+            </a>
+            <a href="{% url 'solicitudes:solicitudes_clases' %}"
+               class="list-group-item list-group-item-action text-uppercase">
+                solicitudes clases
+            </a>
+        </div>
+    </div>
+{% endblock %}

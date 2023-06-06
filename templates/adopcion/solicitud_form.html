@@ -1,0 +1,68 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{ persona_form.nombre.name }}">{{ persona_form.nombre.label }}</label>
+                    {{ persona_form.nombre }}
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{ persona_form.apellidos.name }}">{{ persona_form.apellidos.label }}</label>
+                    {{ persona_form.apellidos }}
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{ persona_form.edad.name }}">{{ persona_form.edad.label }}</label>
+                    {{ persona_form.edad }}
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{ persona_form.email.name }}">{{ persona_form.email.label }}</label>
+                    {{ persona_form.email }}
+                </div>
+                {{ persona_form.email.errors }}
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{ persona_form.telefono.name }}">{{ persona_form.telefono.label }}</label>
+                    {{ persona_form.telefono }}
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{ persona_form.domicilio.name }}">{{ persona_form.domicilio.label }}</label>
+                    {{ persona_form.domicilio }}
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{ persona_form.imagen.name }}">{{ persona_form.imagen.label }}</label>
+                    {{ persona_form.imagen }}
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{ solicitud_form.numero_mascotas.name }}">{{ solicitud_form.numero_mascotas.label }}</label>
+                    {{ solicitud_form.numero_mascotas }}
+                </div>
+                {{ solicitud_form.numero_mascotas.errors }}
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{ solicitud_form.razones.name }}">{{ solicitud_form.razones.label }}</label>
+                    {{ solicitud_form.razones }}
+                </div>
+            </div>
+            <button type="submit">
+                Guardar
+            </button>
+        </div>
+    </form>
+{% endblock %}

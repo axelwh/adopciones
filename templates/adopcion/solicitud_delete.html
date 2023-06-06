@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>¿Desea eliminar la solicitud de {{ persona.nombre }} {{ persona.apellidos }}?</p>
+        <button type="submit" class="btn btn-danger">
+            Sí, deseo eliminarlo
+        </button>
+        <a class="btn btn-primary" href="{% url url_names.show_all %}">
+            Cancelar
+        </a>
+    </form>
+{% endblock %}
